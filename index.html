@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="slide.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        
+      <div class="banner-container" id="inicio">
+          <img style="width: 100%; height: 100%;" src="img/bordaInferiorOndulada.png" alt="borda ondulada">    
+      </div>
+      <div class="texto-banner">
+          <h1>Ágape Piscinas</h1>
+      </div> 
+      <div class="menu">
+          <a href="#inicio">Início</a>
+          <a href="#servico">Serviços</a>
+          <a href="#sobremim"">Sobre Nós</a>
+      </div>
+
+      <!-- início da seção serviços  -->
+      <div class="servicos">
+
+
+        <div class="title"  id="servico">
+          <h2>Limpeza de Piscinas Ágape</h2>
+        </div><hr>
+        <div class="texto-apresentacao">
+          <p>
+            Manter a piscina limpa é fundamental para garantir a saúde e segurança dos usuários. 
+          </p>
+          <p>
+              Benefícios de manter a piscina limpa:
+          </p>
+        </div>
+
+        <div class="servicos-content">
+
+          <div class="texto texto1">
+            <h4>Saúde</h4>
+            <hr>
+            <br>
+            <h6>Prevenção de doenças</h6>
+            <hr>
+            <br><br>
+            <p>
+              Piscinas sujas podem abrigar bactérias, vírus e microorganismos que causam doenças. A água contaminada pode levar a
+              infecções de pele, gastroenterites e outras doenças transmitidas pela água.
+            </p>           
+          </div>
+
+          <div class=" texto texto2">
+            <h4>Economia</h4>
+            <hr>
+            <br>
+            <h6>Manutenção de equipamentos</h6>
+            <hr>
+            <br><br>
+            <p>
+              A sujeira e os detritos podem causar danos aos equipamentos da piscina, como bombas e filtros. A manutenção regular
+              ajuda a prolongar a vida útil desses componentes, evitando custos desnecessários de reparo ou substituição.
+            </p>          
+          </div>
+
+          <div class="texto texto3">
+            <h4>Legislação</h4>
+            <hr>
+            <br>
+            <h6>Cumprimento de Normas</h6>
+            <hr>
+            <br><br>
+            <p>
+              Em muitas áreas, existem regulamentações específicas para a qualidade da água em piscinas públicas e privadas. Manter a
+              piscina limpa e em conformidade com essas normas é essencial para evitar penalidades e garantir a segurança dos
+              usuários.
+            </p>          
+          </div>
+        </div>
+
+      </div> 
+      <!-- fim seção serviços -->
+
+      <!-- prox seção - sobre mim -->
+      <div class="sobremim"  id="sobremim">     
+        <div class="conteudo-sobremim">
+          <h2>
+            Ágape Piscinas: Sua piscina merece o melhor cuidado! 
+          </h2>
+          
+          <div class="texto-sobremim">
+            <p>
+              Garantimos água cristalina, segurança e lazer. 
+            </p><br>
+            <p>
+              Confie na excelência da Ágape para uma experiência aquática impecável.
+            </p>
+          </div>
+
+          <div class="slideshow-container">
+
+            <div class="meuSlide fade">
+              <img src="img/imagem4.jpeg" style="width:100%">
+            </div>
+          
+            <div class="meuSlide fade">
+              <img src="img/imagem5.jpeg" style="width:100%">
+            </div>
+          
+            <div class="meuSlide fade">
+              <img src="img/imagem6.jpeg" style="width:100%">
+            </div>
+          
+            <div class="meuSlide fade">
+              <img src="img/imagem7.jpeg" style="width:100%">
+            </div>
+          
+            <div class="meuSlide fade">
+              <img src="img/imagem8.jpeg" style="width:100%">
+            </div>
+          
+            <div class="meuSlide fade">
+              <img src="img/imagem9.jpeg" style="width:100%">
+            </div>
+
+
+            <div class="dot-container">
+              <span class="dot"></span> 
+              <span class="dot"></span> 
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span> 
+            </div>
+            
+          </div>
+          
+          <br>
+            
+            
+        </div><!-- fecha conteúdo sobre mim -->
+      </div><!-- fecha sobre mim -->
+
+
+      
+
+      <div class="rodape">
+        <footer>2024 - Desenvolvido por Ariel Gama</footer>
+      </div>
+    </div>
+    
+
+    <script>
+        let slideIndex = 0;
+        showSlides();
+        
+        function showSlides() {
+          let i;
+          let slides = document.getElementsByClassName("meuSlide");
+          let dots = document.getElementsByClassName("dot");
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+          }
+          slideIndex++;
+          if (slideIndex > slides.length) {slideIndex = 1}    
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+          setTimeout(showSlides, 2000); // Mudança em 2 segundos
+        }
+
+
+        // menu scrool 
+        document.querySelectorAll('.menu a').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+        
+    </script>
+    
+
+  <!-- botão whatsapp -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<a href="https://wa.me/5511959103425?text=mande%20uma%20mensagem%20para%20%C3%81gape%20Limpeza%20de%20piscinas" style="position:fixed;width:60px;height:60px;bottom:40px;right:40px;background-color:#25d366;color:#FFF;border-radius:50px;text-align:center;font-size:30px;box-shadow: 1px 1px 2px #888;
+  z-index:1000;" target="_blank">
+<i style="margin-top:16px" class="fa fa-whatsapp"></i>
+</a>
+  </body>
+</html>
