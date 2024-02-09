@@ -92,6 +92,8 @@ html {
     margin: 20px;
     padding-right: 15px;
     border: 2px solid gray;
+    border-radius: 4px;
+    box-shadow: 5px 5px 5px #888;
     line-height: 1.2;
     padding: 20px;
 }
